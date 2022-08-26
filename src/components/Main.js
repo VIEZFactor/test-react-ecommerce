@@ -54,6 +54,7 @@ export default function Main(props){
                     }else if(val.modelo.toLowerCase().includes(searchTerm.toLowerCase())){
                         return val
                     }
+                    return false;
                 }).map((product, index) => (
                     <Product key={index} onAdd={onAdd} onRemove={onRemove} product={product}
                     item={cartItems.find((x) => x.id === product.id)}
